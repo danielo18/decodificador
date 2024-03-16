@@ -1,0 +1,71 @@
+body{
+    background: #F3F5FC;
+}
+header{
+    padding: 20px 20px; 
+}
+header img{
+    position: relative;
+}
+header h1{
+    text-align: center;
+}
+.bloque1{
+    width: 50%;
+    height: 300px;
+    padding: 20px 10px;
+    position:absolute;
+}
+.texto{
+    background: inherit;
+    border: 0;
+    width: 90%;
+    height: 240px;
+}
+.encriptar{
+    background: #0A3871;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    font-size: large;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.desencriptar{
+    background: #D8DFE8;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    font-size: large;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.bloque2{
+    width: 40%;
+    padding: 20px 20px;
+    position:relative;
+    left: 50%;
+}
+.resultado{
+    width: 90%;
+    height: 300px;
+    border-radius: 10px;
+}
+.copiar{
+    background: #D8DFE8;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    font-size: large;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+footer p{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
