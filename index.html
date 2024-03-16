@@ -15,18 +15,16 @@
 
     <main>
         <div class="bloque1">
-            <form class="texto-encriptar">
-                <textarea type="text" class="texto" placeholder="Ingrese texto aqui"></textarea>
+           
+                <textarea type="text" id="textoTrabajar" class="texto" placeholder="Ingrese texto aqui" required></textarea>
                 <h6>Solo letras minusculas y sin acentos</h6>
-                <input type="submit" class="encriptar" value="Encriptar">
-                <input type="submit" class="desencriptar" value="Desencriptar">
-            </form>
+                <input type="submit" onclick="encriptarTexto();" class="encriptar" value="Encriptar">
+                <input type="submit" onclick="desencriptarTexto();" class="desencriptar" value="Desencriptar">
+            
         </div>
         <div class="bloque2">
-            <form class="texto-desencriptado">
-                <textarea class="resultado"></textarea>
-                <input type="submit" class="copiar" value="Copiar">
-            </form>
+                <textarea id="resultadoCopiar" class="resultado"></textarea>
+                <input type="submit" onclick="copiarTexto();" id="copio" class="copiar" disabled value="Copiar">
 
         </div>
     </main>
@@ -34,5 +32,6 @@
     <footer>
         <p>Realizado por Daniel Lopez</p>
     </footer>
+    <script src="funciones.js"></script>
 </body>
 </html>
