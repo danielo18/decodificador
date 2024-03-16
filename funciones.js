@@ -65,12 +65,5 @@ function desencriptarTexto(){
 
 function copiarTexto(){
     let texto = document.getElementById('resultadoCopiar').value;
-    navigator.clipboard.writeText(texto).then(
-        () => {
-          /* clipboard successfully set */
-        },
-        () => {
-          /* clipboard write failed */
-        },
-      );
+    navigator.clipboard.writeText(texto);
 }
