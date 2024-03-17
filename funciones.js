@@ -8,27 +8,37 @@ function encriptarTexto(){
     let text = document.getElementById('textoTrabajar').value;
     let encriptado="";
     let letra="";
+    let verificar=0;
      for(var con=0; con<text.length;con++){
-        letra=text.charAt(con);
-       if(text.charAt(con)=='a'){
+         letra=text.charAt(con);
+         if(letra==letra.toUpperCase() || !isNaN(letra)){
+               verificar=1;
+         } 
+         if(text.charAt(con)=='a'){
             letra=textoa;
-       }
-       if(text.charAt(con)=='e'){
+         }
+         if(text.charAt(con)=='e'){
             letra=textoe;
-       }
-       if(text.charAt(con)=='i'){
+         }
+         if(text.charAt(con)=='i'){
             letra=textoi;
-       }
-       if(text.charAt(con)=='o'){
+         }
+         if(text.charAt(con)=='o'){
             letra=textoo;
-       }
-       if(text.charAt(con)=='u'){
+         }
+         if(text.charAt(con)=='u'){
             letra=textou;
-       } 
-       encriptado+=letra;
-  }
-  document.getElementById('resultadoCopiar').value=encriptado;
-  document.getElementById('copio').removeAttribute('disabled');
+          } 
+         encriptado+=letra;
+    }
+    alert(verificar);
+    if(verificar==0){
+     document.getElementById('resultadoCopiar').value=encriptado;
+     document.getElementById('copio').removeAttribute('disabled');
+    }
+    else{
+     document.getElementById('mensaje').style.color="red";
+    }
 }
 
 function desencriptarTexto(){
