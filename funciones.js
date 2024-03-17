@@ -3,6 +3,7 @@ var textoe="enter";
 var textoi="imes";
 var textoo="ober";
 var textou="ufat";
+
 function encriptarTexto(){
     let text = document.getElementById('textoTrabajar').value;
     let encriptado="";
@@ -36,23 +37,23 @@ function desencriptarTexto(){
     let letra="";
     for(var con=0; con<text.length;con++){
         letra=text.charAt(con);
-        if(text.charAt(con)=='a'&& text.slice(con,con+2)=="ai" ){
+        if(text.charAt(con)=='a'&& text.slice(con,con+2)==textoa ){
            letra="a";
            con++;
        }
-       if(text.charAt(con)=='e' && text.slice(con,con+5)=="enter"){
+       if(text.charAt(con)=='e' && text.slice(con,con+5)==textoe){
             letra="e";
             con=con+4;
        }
-       if(text.charAt(con)=='i'&& text.slice(con,con+4)=="imes"){
+       if(text.charAt(con)=='i'&& text.slice(con,con+4)==textoi){
             letra="i";
             con=con+3;
        }
-       if(text.charAt(con)=='o'&& text.slice(con,con+4)=="ober"){
+       if(text.charAt(con)=='o'&& text.slice(con,con+4)==textoo){
             letra="o";
             con=con+3;
        }
-       if(text.charAt(con)=='u'&& text.slice(con,con+4)=="ufat"){
+       if(text.charAt(con)=='u'&& text.slice(con,con+4)==textou){
             letra="u";
             con=con+3;  
        } 
@@ -67,10 +68,10 @@ function copiarTexto(){
     let texto = document.getElementById('resultadoCopiar').value;
     navigator.clipboard.writeText(texto).then(
         () => {
-          /* clipboard successfully set */
+          alert("Texto copiado");
         },
         () => {
-          /* clipboard write failed */
+          alert("Error al copiar texto");
         },
       );
 }
